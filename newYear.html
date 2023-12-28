@@ -19,7 +19,12 @@
       }
       html,
       body {
-        background: #161616;
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        background-image: url(bg2.jpg);
         height: 100%;
         width: 100%;
         display: flex;
@@ -34,49 +39,41 @@
         width: 75vw;
         place-items: center;
         color: white;
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: rgba(255, 255, 255, 0.057);
         backdrop-filter: blur(5px);
         border-radius: 25px;
         box-shadow: 3px 3px 5px #000, -3px -3px 5px #000;
-        /* z-index: 1; */
       }
       .year {
         font-size: 200px;
         font-weight: 900;
         color: #161616f5;
-        /* background-color: red; */
-        text-shadow: 3px 3px #000;
+        text-shadow: 7px 5px 4px #000;
         font-family: "Montagu Slab", serif;
         height: 190px;
         display: flex;
         justify-content: center;
         align-items: center;
-        /* padding: 0px 0px; */
-        z-index: -1;
       }
 
       .timer {
         width: 80%;
         height: 300px;
-        /* font-size: 100px; */
         border-radius: 20px;
-        /* background-color: aqua; */
         color: #fff;
         margin: 0xp 0px;
         display: flex;
         justify-content: center;
         align-items: center;
-
         box-shadow: inset 3px 3px 3px #000000, inset -3px -3px 3px #000000;
-        z-index: -1;
       }
       #twenty {
         position: relative;
-        left: 14%;
+        left: 15%;
       }
       #twentythree {
         position: relative;
-        right: 13%;
+        right: 14%;
       }
     </style>
   </head>
