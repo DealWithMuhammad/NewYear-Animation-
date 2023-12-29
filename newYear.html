@@ -65,19 +65,21 @@
         justify-content: center;
         align-items: center;
         box-shadow: inset 3px 3px 3px #000000, inset -3px -3px 3px #000000;
+        position: relative;
       }
       #twenty {
         position: relative;
         left: 15%;
       }
+
       #twentythree {
         position: relative;
         right: 14%;
       }
 
       .newYear {
-        position: relative;
-        bottom: 30%;
+        position: absolute;
+        top: 10%;
         display: none;
       }
 
@@ -101,6 +103,12 @@
         #twentythree {
           position: static;
           text-align: center;
+        }
+
+        .newYear {
+          position: absolute;
+          bo
+          display: none;
         }
       }
     </style>
@@ -126,8 +134,6 @@
           seconds--;
 
           if (seconds < 0) {
-            clearInterval(countdownInterval);
-
             twentyThreeElement.innerText = "24";
             timerElement.innerText = "Happy New Year";
             newYear[0].style.display = "block";
