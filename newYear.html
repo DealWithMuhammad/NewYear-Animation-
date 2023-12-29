@@ -10,7 +10,6 @@
       href="https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,700&display=swap"
       rel="stylesheet"
     />
-
     <title>Document</title>
     <style>
       * {
@@ -75,13 +74,68 @@
         position: relative;
         right: 14%;
       }
+
+      .newYear {
+        position: relative;
+        bottom: 30%;
+        display: none;
+      }
+
+      /* Media Queries */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          width: 90vw;
+        }
+
+        .timer {
+          margin: 20px 0;
+        }
+
+        .year {
+          left: auto;
+          right: auto;
+        }
+
+        #twenty,
+        #twentythree {
+          position: static;
+          text-align: center;
+        }
+      }
     </style>
   </head>
   <body>
     <div class="container">
       <div id="twenty" class="year">20</div>
-      <div class="timer">timer</div>
+      <div id="timer" class="timer"></div>
+      <div class="newYear"><h1>Happy New Year</h1></div>
       <div id="twentythree" class="year">23</div>
     </div>
+
+    <script>
+      function startTimer() {
+        let seconds = 2;
+        const timerElement = document.getElementById("timer");
+        const twentyThreeElement = document.getElementById("twentythree");
+        const newYear = document.getElementsByClassName("newYear");
+
+        // Countdown interval
+        const countdownInterval = setInterval(() => {
+          timerElement.innerText = seconds;
+          seconds--;
+
+          if (seconds < 0) {
+            clearInterval(countdownInterval);
+
+            twentyThreeElement.innerText = "24";
+            timerElement.innerText = "Happy New Year";
+            newYear[0].style.display = "block";
+          }
+        }, 1000);
+      }
+
+      window.onload = startTimer;
+    </script>
   </body>
 </html>
