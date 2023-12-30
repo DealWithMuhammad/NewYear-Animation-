@@ -1,0 +1,275 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #161616;
+}
+
+.container {
+    width: 80vw;
+    height: 85vh;
+    background-color: #161616;
+    box-shadow: 3px 3px 4px, -3px -3px 4px;
+    border-radius: 10px;
+    position: relative;
+}
+/* .image img{
+    height: 100%;
+    width: 100%;
+  
+}
+.image{
+    top: 0;
+    height:0%;
+    width: 100%;
+position: absolute;
+z-index: 1;
+animation: scrolldown;
+animation-duration: 2s;
+animation-delay: 6s;
+}
+@keyframes scrolldown {
+    0%{
+        width: 100%;
+        height: 0%;
+    }
+    50%{
+        width: 100%;
+        height: 100%;
+    }
+    100%{
+        width: 100%;
+        height: 0%;
+    }
+    
+} */
+
+/* .year::after {
+      content: "";
+      position: absolute;
+      background-color: #161616;
+      width: 7vw;
+      height: 16vh;
+      top: 35%;
+      border-radius: 50%;
+      box-shadow: 4px 4px 6px #000, -4px -4px 6px #000;
+    } */
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    color: white;
+    height: 55%;
+    border-radius: 20px;
+}
+
+.days {
+    width: 20%;
+    height: 45%;
+    text-align: center;
+}
+
+#days {
+    color: #fff;
+    font-size: 4vw;
+    font-family: "Montagu Slab", serif;
+    text-shadow: 5px 10px 2px #000;
+    letter-spacing: 2px;
+}
+
+.day {
+    color: #fff;
+    font-size: 3vw;
+    font-family: "Montagu Slab", serif;
+    padding: 20px 0px;
+    text-shadow: 5px 10px 2px #000;
+    letter-spacing: 2px;
+}
+
+.hours {
+    width: 20%;
+    height: 45%;
+    text-align: center;
+}
+
+#hour {
+    color: #fff;
+    font-size: 4vw;
+    font-family: "Montagu Slab", serif;
+    text-shadow: 5px 10px 2px #000;
+    letter-spacing: 2px;
+}
+
+.hour {
+    color: #fff;
+    font-size: 3vw;
+    font-family: "Montagu Slab", serif;
+    padding: 20px 0px;
+    text-shadow: 5px 10px 2px #000;
+    letter-spacing: 2px;
+}
+
+.minutes {
+    width: 20%;
+    height: 45%;
+    text-align: center;
+}
+
+#minute {
+    color: #fff;
+    font-size: 4vw;
+    font-family: "Montagu Slab", serif;
+    text-shadow: 5px 10px 2px #000;
+    letter-spacing: 2px;
+}
+
+.minute {
+    color: #fff;
+    font-size: 3vw;
+    font-family: "Montagu Slab", serif;
+    padding: 20px 0px;
+    text-shadow: 5px 10px 2px #000;
+    letter-spacing: 2px;
+}
+
+.seconds {
+    width: 20%;
+    height: 45%;
+    text-align: center;
+}
+
+#timer {
+    color: #fff;
+    font-size: 4vw;
+    font-family: "Montagu Slab", serif;
+    text-shadow: 5px 10px 2px #000;
+    letter-spacing: 2px;
+}
+
+.second {
+    color: #fff;
+    font-size: 3vw;
+    font-family: "Montagu Slab", serif;
+    padding: 20px 0px;
+    text-shadow: 5px 10px 2px #000;
+    letter-spacing: 2px;
+}
+
+.year-container {
+    border-radius: 20px;
+    height: 26vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.year {
+    font-size: 15vw;
+    font-weight: 900;
+    color: #161616;
+    text-shadow: 7px 10px 4px #000;
+    font-family: "Montagu Slab", serif;
+    position: relative;
+}
+
+.wrapper{
+    display: none;
+}
+
+.checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #7ac142;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards
+}
+
+.checkmark {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    margin: 10% auto;
+    box-shadow: inset 0px 0px 0px #7ac142;
+  
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both
+}
+
+.checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards
+    
+    }
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0
+    }
+}
+
+@keyframes scale {
+
+    0%,
+    100% {
+        transform: none
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1)
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #7ac142
+    }
+}
+
+
+/* after container starting */
+/* .after-container {
+    background-color: red;
+    width: 75vw;
+    height: 0vh;
+    position: absolute;
+    z-index: 1;
+    animation: newyear;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 10s;
+    color: #fff;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+/* 
+@keyframes newyear {
+    0% {
+        width: 75vw;
+        height: 0vh;
+        z-index: 1;
+    }
+
+    100% {
+        width: 75vw;
+        height: 80vh;
+        z-index: 1;
+    }
+} */
