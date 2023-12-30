@@ -6,15 +6,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-    <link rel="stylesheet" href="style.css" />
+    <!-- link -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,700&display=swap"
       rel="stylesheet"
     />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+
     <style>
       /** @format */
       * {
@@ -48,7 +50,7 @@
       }
       .loader-wrap .loader-wrap-heading h1 {
         font-size: 120px;
-        z-index: 20;
+        /* z-index: 20; */
         color: #e0e0e0;
         text-transform: uppercase;
         font-weight: lighter;
@@ -82,126 +84,118 @@
   </head>
   <body>
     <div class="loader-wrap">
-      <svg
-        style="background-color: red"
-        class="svg"
-        viewBox="0 0 1000 1000"
-        preserveAspectRatio="none"
-      >
+      <svg class="svg" viewBox="0 0 1000 1000" preserveAspectRatio="none">
         <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
       </svg>
 
       <div class="loader-wrap-heading">
-        <span
-          ><h1></h1>
-          <div class="container">
-            <div class="flex-container">
-              <div class="days">
-                <div id="days">364</div>
-                <div class="day">DAYS</div>
-                <!-- checkbox -->
-                <div class="wrapper">
-                  <svg
-                    class="checkmark"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 52 52"
-                  >
-                    <circle
-                      class="checkmark__circle"
-                      cx="26"
-                      cy="26"
-                      r="25"
-                      fill="none"
-                    />
-                    <path
-                      class="checkmark__check"
-                      fill="none"
-                      d="M14.1 27.2l7.1 7.2 16.7-16.8"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div class="hours">
-                <div id="hour">23</div>
-                <div class="hour">HOURS</div>
-                <!-- checkbox -->
-                <div class="wrapper">
-                  <svg
-                    class="checkmark"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 52 52"
-                  >
-                    <circle
-                      class="checkmark__circle"
-                      cx="26"
-                      cy="26"
-                      r="25"
-                      fill="none"
-                    />
-                    <path
-                      class="checkmark__check"
-                      fill="none"
-                      d="M14.1 27.2l7.1 7.2 16.7-16.8"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div class="minutes">
-                <div id="minute">59</div>
-                <div class="minute">MIN</div>
-                <!-- checkbox -->
-                <div class="wrapper">
-                  <svg
-                    class="checkmark"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 52 52"
-                  >
-                    <circle
-                      class="checkmark__circle"
-                      cx="26"
-                      cy="26"
-                      r="25"
-                      fill="none"
-                    />
-                    <path
-                      class="checkmark__check"
-                      fill="none"
-                      d="M14.1 27.2l7.1 7.2 16.7-16.8"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div class="seconds">
-                <div id="timer">57</div>
-                <div class="second">SEC</div>
-                <!-- checkbox -->
-                <div class="wrapper">
-                  <svg
-                    class="checkmark"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 52 52"
-                  >
-                    <circle
-                      class="checkmark__circle"
-                      cx="26"
-                      cy="26"
-                      r="25"
-                      fill="none"
-                    />
-                    <path
-                      class="checkmark__check"
-                      fill="none"
-                      d="M14.1 27.2l7.1 7.2 16.7-16.8"
-                    />
-                  </svg>
-                </div>
+        <div class="container">
+          <div class="flex-container">
+            <div class="days">
+              <div id="days">364</div>
+              <div class="day">DAYS</div>
+              <!-- checkbox -->
+              <div class="wrapper">
+                <svg
+                  class="checkmark"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 52 52"
+                >
+                  <circle
+                    class="checkmark__circle"
+                    cx="26"
+                    cy="26"
+                    r="25"
+                    fill="none"
+                  />
+                  <path
+                    class="checkmark__check"
+                    fill="none"
+                    d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                  />
+                </svg>
               </div>
             </div>
-            <div class="year-container">
-              <div class="year">2023</div>
+            <div class="hours">
+              <div id="hour">23</div>
+              <div class="hour">HOURS</div>
+              <!-- checkbox -->
+              <div class="wrapper">
+                <svg
+                  class="checkmark"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 52 52"
+                >
+                  <circle
+                    class="checkmark__circle"
+                    cx="26"
+                    cy="26"
+                    r="25"
+                    fill="none"
+                  />
+                  <path
+                    class="checkmark__check"
+                    fill="none"
+                    d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="minutes">
+              <div id="minute">59</div>
+              <div class="minute">MIN</div>
+              <!-- checkbox -->
+              <div class="wrapper">
+                <svg
+                  class="checkmark"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 52 52"
+                >
+                  <circle
+                    class="checkmark__circle"
+                    cx="26"
+                    cy="26"
+                    r="25"
+                    fill="none"
+                  />
+                  <path
+                    class="checkmark__check"
+                    fill="none"
+                    d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="seconds">
+              <div id="timer">57</div>
+              <div class="second">SEC</div>
+              <!-- checkbox -->
+              <div class="wrapper">
+                <svg
+                  class="checkmark"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 52 52"
+                >
+                  <circle
+                    class="checkmark__circle"
+                    cx="26"
+                    cy="26"
+                    r="25"
+                    fill="none"
+                  />
+                  <path
+                    class="checkmark__check"
+                    fill="none"
+                    d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
-        </span>
+          <div class="year-container">
+            <div class="year">2023</div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="new_year">
@@ -229,17 +223,14 @@
             document.getElementById("hour").innerText = "24";
             document.getElementById("minute").innerText = "60";
 
-            tl.from(".loader-wrap-heading h1", {
+            tl.from(".loader-wrap-heading ", {
               delay: 1,
-              y: 200,
-              skewY: 10,
-            }).to(".loader-wrap-heading h1", {
-              delay: 1.5,
-              y: -200,
-              skewY: 10,
+            }).to(".loader-wrap-heading ", {
+              delay: 1,
             });
+
             tl.to(svg, {
-              duration: 0.8,
+              duration: 1,
               attr: { d: curve },
               ease: "power2.easeIn",
             }).to(svg, {
@@ -247,27 +238,34 @@
               attr: { d: flat },
               ease: "power2.easeOut",
             });
+
             tl.to(".loader-wrap", {
               y: -1500,
             });
+
             tl.to(".loader-wrap", {
-              zIndex: 1,
+              zIndex: -1,
               display: "none",
             });
-            tl.from(
-              ".new_year h1",
-              {
-                y: 100,
-                opacity: 0,
-              },
-              "-=1.5"
-            );
-            // Display checkmarks for all instances of the wrapper class
-            checkBoxes.forEach((checkBox) => {
-              checkBox.style.display = "block";
-            });
+
+            setTimeout(() => {
+              tl.from(
+                ".new_year h1",
+                {
+                  y: 100,
+                  opacity: 0,
+                },
+                "-=1.5"
+              );
+
+              checkBoxes.forEach((checkBox) => {
+                checkBox.style.display = "block";
+              });
+            }, 100);
 
             timerElement.innerText = "60";
+
+            clearInterval(countdownInterval);
           }
 
           seconds++;

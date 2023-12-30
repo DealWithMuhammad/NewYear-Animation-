@@ -19,7 +19,21 @@ body {
     background-color: #161616;
     box-shadow: 3px 3px 4px, -3px -3px 4px;
     border-radius: 10px;
-    position: relative;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    animation-duration: 4s;
+animation-delay: 6s;
+    animation-name:slideup;
+}
+@keyframes slideup {
+    0%{
+        transform: translatey(0%);
+    }
+    100%{
+        transform: translatey(-600px);
+    }
+    
 }
 /* .image img{
     height: 100%;
