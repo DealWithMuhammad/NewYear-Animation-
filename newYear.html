@@ -1,143 +1,291 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- links -->
+    <!-- link -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,700&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <title>2024 - New Year</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="firework.css" />
+
     <style>
       * {
         margin: 0;
         padding: 0;
       }
-      html,
       body {
-        height: 100%;
-        margin: 0;
+        background-color: #e0e0e0;
+        overflow: hidden;
       }
-
-      body {
-        background-image: url(new-year.jpg);
-        height: 100%;
+      span {
+        overflow: hidden;
+        display: block;
+      }
+      .loader-wrap {
+        position: absolute;
+        z-index: 10;
+        height: 100vh;
         width: 100%;
         display: flex;
-        justify-content: center;
+        overflow: hidden;
         align-items: center;
-        background-position: center;
-      }
-
-      .container {
-        display: flex;
-        justify-content: space-evenly;
-        height: 80vh;
-        width: 75vw;
-        place-items: center;
-        color: white;
-        background-color: rgba(255, 255, 255, 0.057);
-        backdrop-filter: blur(5px);
-        border-radius: 25px;
-        box-shadow: 3px 3px 5px #000, -3px -3px 5px #000;
-      }
-      .year {
-        font-size: 200px;
-        font-weight: 900;
-        color: #161616f5;
-        text-shadow: 7px 5px 4px #000;
-        font-family: "Montagu Slab", serif;
-        height: 190px;
-        display: flex;
         justify-content: center;
-        align-items: center;
+        background: transparent;
       }
-
-      .timer {
-        width: 80%;
-        height: 300px;
-        border-radius: 20px;
-        color: #fff;
-        margin: 0xp 0px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-shadow: inset 3px 3px 3px #000000, inset -3px -3px 3px #000000;
-        position: relative;
-      }
-      #twenty {
-        position: relative;
-        left: 15%;
-      }
-
-      #twentythree {
-        position: relative;
-        right: 14%;
-      }
-
-      .newYear {
+      .loader-wrap .svg {
         position: absolute;
-        top: 10%;
-        display: none;
+        top: 0;
+        width: 100vw;
+        height: 110vh;
+      }
+      .loader-wrap .loader-wrap-heading h1 {
+        font-size: 120px;
+        /* z-index: 20; */
+        color: #e0e0e0;
+        text-transform: uppercase;
+        font-weight: lighter;
+        font-family: "Ogg";
+      }
+      .new_year {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+        background: linear-gradient(#0007, #0000), #123;
+      }
+      .new_year h1 {
+        font-family: "Ogg";
+        font-weight: lighter;
+        font-size: 100px;
+        text-transform: uppercase;
+        color: #fff;
       }
 
-      /* Media Queries */
-      @media (max-width: 768px) {
-        .container {
-          flex-direction: column;
-          width: 90vw;
+      @media (max-width: 767px) {
+        .loader-wrap .svg {
+          width: 200vw;
+          margin-left: -50vw;
         }
-
-        .timer {
-          margin: 20px 0;
-        }
-
-        .year {
-          left: auto;
-          right: auto;
-        }
-
-        #twenty,
-        #twentythree {
-          position: static;
-          text-align: center;
-        }
-
-        .newYear {
-          position: absolute;
-          display: none;
+        .loader-wrap .loader-wrap-heading,
+        .new_year h1 {
+          font-size: 60px;
         }
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div id="twenty" class="year">20</div>
-      <div id="timer" class="timer"></div>
-      <div class="newYear"><h1>Happy New Year</h1></div>
-      <div id="twentythree" class="year">23</div>
+    <div class="firework"></div>
+    <div class="firework"></div>
+    <div class="firework"></div>
+    <div class="loader-wrap">
+      <svg class="svg" viewBox="0 0 1000 1000" preserveAspectRatio="none">
+        <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
+      </svg>
+
+      <div class="loader-wrap-heading">
+        <div class="container">
+          <div class="flex-container">
+            <div class="days">
+              <div id="days">364</div>
+              <div class="day">DAYS</div>
+              <!-- checkbox -->
+              <div class="wrapper">
+                <svg
+                  class="checkmark"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 52 52"
+                >
+                  <circle
+                    class="checkmark__circle"
+                    cx="26"
+                    cy="26"
+                    r="25"
+                    fill="none"
+                  />
+                  <path
+                    class="checkmark__check"
+                    fill="none"
+                    d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="hours">
+              <div id="hour">23</div>
+              <div class="hour">HOURS</div>
+              <!-- checkbox -->
+              <div class="wrapper">
+                <svg
+                  class="checkmark"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 52 52"
+                >
+                  <circle
+                    class="checkmark__circle"
+                    cx="26"
+                    cy="26"
+                    r="25"
+                    fill="none"
+                  />
+                  <path
+                    class="checkmark__check"
+                    fill="none"
+                    d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="minutes">
+              <div id="minute">59</div>
+              <div class="minute">MIN</div>
+              <!-- checkbox -->
+              <div class="wrapper">
+                <svg
+                  class="checkmark"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 52 52"
+                >
+                  <circle
+                    class="checkmark__circle"
+                    cx="26"
+                    cy="26"
+                    r="25"
+                    fill="none"
+                  />
+                  <path
+                    class="checkmark__check"
+                    fill="none"
+                    d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="seconds">
+              <div id="timer">57</div>
+              <div class="second">SEC</div>
+              <!-- checkbox -->
+              <div class="wrapper">
+                <svg
+                  class="checkmark"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 52 52"
+                >
+                  <circle
+                    class="checkmark__circle"
+                    cx="26"
+                    cy="26"
+                    r="25"
+                    fill="none"
+                  />
+                  <path
+                    class="checkmark__check"
+                    fill="none"
+                    d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="year-container">
+            <div class="year">2023</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="new_year">
+      <span>
+        <h1>Happy New Year</h1>
+      </span>
     </div>
 
     <script>
+      const svg = document.getElementById("svg");
+      const tl = gsap.timeline();
+      const curve = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
+      const flat = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
+      let fireworksDisplayed = false;
+
       function startTimer() {
-        let seconds = 10;
+        let seconds = 57;
         const timerElement = document.getElementById("timer");
-        const twentyThreeElement = document.getElementById("twentythree");
-        const newYear = document.getElementsByClassName("newYear");
+        const checkBoxes = document.querySelectorAll(".wrapper");
 
         // Countdown interval
         const countdownInterval = setInterval(() => {
           timerElement.innerText = seconds;
-          seconds--;
 
-          if (seconds < 0) {
-            twentyThreeElement.innerText = "24";
-            timerElement.innerText = "Happy New Year";
-            newYear[0].style.display = "block";
+          if (seconds > 60) {
+            document.getElementById("days").innerText = "365";
+            document.getElementById("hour").innerText = "24";
+            document.getElementById("minute").innerText = "60";
+
+            tl.from(".loader-wrap-heading ", {
+              delay: 1,
+            }).to(".loader-wrap-heading ", {
+              delay: 1,
+            });
+
+            tl.to(svg, {
+              duration: 1,
+              attr: { d: curve },
+              ease: "power2.easeIn",
+            }).to(svg, {
+              duration: 0.8,
+              attr: { d: flat },
+              ease: "power2.easeOut",
+            });
+
+            tl.to(".loader-wrap", {
+              y: -1500,
+            });
+
+            tl.to(".loader-wrap", {
+              zIndex: -1,
+              display: "none",
+            });
+
+            setTimeout(() => {
+              tl.from(
+                ".new_year h1",
+                {
+                  y: 100,
+                  opacity: 0,
+                },
+                "-=1.5"
+              );
+
+              checkBoxes.forEach((checkBox) => {
+                checkBox.style.display = "block";
+              });
+            }, 100);
+
+            timerElement.innerText = "60";
+
+            clearInterval(countdownInterval);
+            if (!fireworksDisplayed) {
+              // Start fireworks animation
+              const fireworks = document.querySelectorAll(".firework");
+              fireworks.forEach((firework) => {
+                firework.style.animationPlayState = "running";
+              });
+
+              newYear[0].style.display = "block";
+              fireworksDisplayed = true; // Set flag to prevent multiple displays
+            }
           }
+
+          seconds++;
         }, 1000);
       }
 
