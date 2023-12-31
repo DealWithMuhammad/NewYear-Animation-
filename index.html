@@ -23,14 +23,17 @@
         margin: 0;
         padding: 0;
       }
+
       body {
         background-color: #e0e0e0;
         overflow: hidden;
       }
+
       span {
         overflow: hidden;
         display: block;
       }
+
       .loader-wrap {
         position: absolute;
         z-index: 10;
@@ -42,6 +45,7 @@
         justify-content: center;
         background: transparent;
       }
+
       .loader-wrap .svg {
         position: absolute;
         top: 0;
@@ -57,25 +61,59 @@
         width: 100%;
         background: linear-gradient(#0007, #0000), #123;
       }
+
       .new_year h1 {
         font-family: "Ogg";
         font-weight: lighter;
-        font-size: 100px;
+        font-size: 10vw;
         text-transform: uppercase;
-        color: #fff;
+        letter-spacing: 2px;
+        position: relative;
+        color: transparent;
+        width: 100%;
+      }
+      .new_year h1::before {
+        content: attr(data-text);
+        width: 90vw; /* Set the initial width to the final value of the animation */
+        height: 100%;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        border-right: 2px solid rgb(0, 255, 21);
+        color: #006233;
+        overflow: hidden;
+        animation-name: identifier;
+        animation-duration: 3s;
+        animation-delay: 9s; /* Delay to match the JavaScript timing */
+        animation-fill-mode: both; /* Keeps the end state of the animation */
       }
 
+      @keyframes identifier {
+        0% {
+          width: 0vw;
+        }
+        100% {
+          width: 90vw;
+        }
+      }
+      .new-year {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
       @media (max-width: 767px) {
         .loader-wrap .svg {
           width: 200vw;
           margin-left: -50vw;
         }
+
         .new_year h1 {
           font-size: 60px;
         }
       }
     </style>
   </head>
+
   <body style="overflow: hidden">
     <div class="firework"></div>
     <div class="firework"></div>
@@ -86,7 +124,7 @@
       </svg>
 
       <div>
-        <div class="container loader-wrap-heading">
+        <div class="container">
           <div class="flex-container">
             <div class="days">
               <div id="days">364</div>
@@ -190,16 +228,21 @@
             </div>
           </div>
           <div class="year-container">
-            <div class="year">2023</div>
+            <h1 data-text="2023">2023</h1>
           </div>
         </div>
       </div>
     </div>
     <div class="new_year">
       <span>
-        <h1>Happy New Year</h1>
+        <h1 data-text="HAPPYNEWYEAR.">HAPPYNEWYEAR.</h1>
       </span>
     </div>
+    <!-- <div class="new-year">
+      <span>
+        <h1 data-text="2024">2024</h1>
+      </span>
+    </div> -->
 
     <script src="countdown.js"></script>
   </body>

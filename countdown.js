@@ -18,12 +18,12 @@ function startTimer() {
       document.getElementById("hour").innerText = "24";
       document.getElementById("minute").innerText = "60";
 
-      tl.from(".loader-wrap-heading", {
+      tl.from(".loader-wrap-heading ", {
         delay: 1,
       }).to(".loader-wrap-heading ", {
-        delay: 1.5,
-        y: -1200,
+        delay: 1,
       });
+
       tl.to(svg, {
         duration: 1,
         attr: { d: curve },
@@ -44,14 +44,14 @@ function startTimer() {
       });
 
       setTimeout(() => {
-        tl.from(
-          ".new_year h1",
-          {
-            y: 100,
-            opacity: 0,
-          },
-          "-=1.5"
-        );
+        // tl.from(
+        //   ".new_year h1",
+        //   {
+        //     y: 100,
+        //     opacity: 0,
+        //   },
+        //   "-=1.5"
+        // );
 
         checkBoxes.forEach((checkBox) => {
           checkBox.style.display = "block";
@@ -69,7 +69,7 @@ function startTimer() {
         });
 
         newYear[0].style.display = "block";
-        fireworksDisplayed = true; // Set flag to prevent multiple displays
+        fireworksDisplayed = true;
       }
     }
 

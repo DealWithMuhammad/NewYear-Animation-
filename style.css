@@ -7,72 +7,34 @@ html,
 body {
     width: 100%;
     height: 100%;
-    background-color: #161616;
 }
 
 .container {
-    width: 80vw;
-    height: 85vh;
-    background-color: #161616;
-    box-shadow: 3px 3px 4px, -3px -3px 4px;
+    width: 70vw;
+    height: 75vh;
+    background-color: #000;
+    box-shadow: 3px 3px 10px #00ff51, -3px -3px 10px #00ff51;
     border-radius: 10px;
     position: absolute;
     top: 10%;
-    left: 10%;
-    animation-duration: 4s;
-animation-delay: 6s;
-    animation-name:slideup;
+    left: 15%;
+    animation-name: slideup;
+    animation-duration: 2s;
+    animation-delay: 7s;
+    animation-fill-mode: forwards;
 }
+
 @keyframes slideup {
-    0%{
+    0% {
         transform: translatey(0%);
     }
-    100%{
-        transform: translatey(-600px);
-    }
-    
-}
-/* .image img{
-    height: 100%;
-    width: 100%;
-  
-}
-.image{
-    top: 0;
-    height:0%;
-    width: 100%;
-position: absolute;
-z-index: 1;
-animation: scrolldown;
-animation-duration: 2s;
-animation-delay: 6s;
-}
-@keyframes scrolldown {
-    0%{
-        width: 100%;
-        height: 0%;
-    }
-    50%{
-        width: 100%;
-        height: 100%;
-    }
-    100%{
-        width: 100%;
-        height: 0%;
-    }
-    
-} */
 
-/* .year::after {
-      content: "";
-      position: absolute;
-      background-color: #161616;
-      width: 7vw;
-      height: 16vh;
-      top: 35%;
-      border-radius: 50%;
-      box-shadow: 4px 4px 6px #000, -4px -4px 6px #000;
-    } */
+    100% {
+        transform: translatey(-150%);
+    }
+
+}
+
 .flex-container {
     display: flex;
     justify-content: space-around;
@@ -84,9 +46,11 @@ animation-delay: 6s;
 
 .days {
     width: 20%;
-    height: 45%;
+    height: 30vh;
     text-align: center;
+
 }
+
 
 #days {
     color: #fff;
@@ -107,8 +71,8 @@ animation-delay: 6s;
 
 .hours {
     width: 20%;
-    height: 45%;
     text-align: center;
+    height: 30vh;
 }
 
 #hour {
@@ -130,8 +94,8 @@ animation-delay: 6s;
 
 .minutes {
     width: 20%;
-    height: 45%;
     text-align: center;
+    height: 30vh;
 }
 
 #minute {
@@ -155,6 +119,7 @@ animation-delay: 6s;
     width: 20%;
     height: 45%;
     text-align: center;
+    height: 30vh;
 }
 
 #timer {
@@ -177,22 +142,54 @@ animation-delay: 6s;
 .year-container {
     border-radius: 20px;
     height: 26vh;
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
-.year {
+.year-container h1 {
     font-size: 15vw;
     font-weight: 900;
     color: #161616;
     text-shadow: 7px 10px 4px #000000;
     font-family: "Montagu Slab", serif;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.wrapper{
+.year-container h1::before {
+    content: attr(data-text);
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0%;
+    left: 0;
+    border-right: 2px solid transparent;
+    color: #006233;
+    overflow: hidden;
+    animation-name: slideright;
+    animation-duration: 1.5s;
+    animation-delay: 6s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideright {
+    0% {
+        border-right: 2px solid #006233;
+        width: 0%;
+    }
+
+    100% {
+        border-right: 2px solid #006233;
+        width: 100%;
+    }
+
+}
+
+.wrapper {
     display: none;
 }
 
@@ -201,7 +198,7 @@ animation-delay: 6s;
     stroke-dashoffset: 166;
     stroke-width: 2;
     stroke-miterlimit: 10;
-    stroke: #7ac142;
+    stroke: #006233;
     fill: none;
     animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards
 }
@@ -215,8 +212,7 @@ animation-delay: 6s;
     stroke: #fff;
     stroke-miterlimit: 10;
     margin: 10% auto;
-    box-shadow: inset 0px 0px 0px #7ac142;
-  
+    box-shadow: inset 0px 0px 0px #006233;
     animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both
 }
 
@@ -225,8 +221,7 @@ animation-delay: 6s;
     stroke-dasharray: 48;
     stroke-dashoffset: 48;
     animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards
-    
-    }
+}
 
 @keyframes stroke {
     100% {
@@ -248,7 +243,7 @@ animation-delay: 6s;
 
 @keyframes fill {
     100% {
-        box-shadow: inset 0px 0px 0px 30px #7ac142
+        box-shadow: inset 0px 0px 0px 30px #006233;
     }
 }
 
