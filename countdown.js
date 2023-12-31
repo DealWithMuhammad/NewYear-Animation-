@@ -18,12 +18,12 @@ function startTimer() {
       document.getElementById("hour").innerText = "24";
       document.getElementById("minute").innerText = "60";
 
-      tl.from(".loader-wrap-heading ", {
+      tl.from(".loader-wrap-heading", {
         delay: 1,
       }).to(".loader-wrap-heading ", {
-        delay: 1,
+        delay: 1.5,
+        y: -1200,
       });
-
       tl.to(svg, {
         duration: 1,
         attr: { d: curve },
