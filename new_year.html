@@ -121,6 +121,9 @@
       <div class="year-container">
         <div class="year">2023</div>
       </div>
+      <div class="firework"></div>
+      <div class="firework"></div>
+      <div class="firework"></div>
     </div>
 
     <script>
@@ -128,6 +131,7 @@
         let seconds = 57;
         const timerElement = document.getElementById("timer");
         const checkBoxes = document.querySelectorAll(".wrapper");
+        let fireworksDisplayed = false;
 
         // Countdown interval
         const countdownInterval = setInterval(() => {

@@ -16,6 +16,7 @@
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="firework.css" />
 
     <style>
       /** @format */
@@ -62,12 +63,14 @@
         justify-content: center;
         height: 100vh;
         width: 100%;
+        background: linear-gradient(#0007, #0000), #123;
       }
       .new_year h1 {
         font-family: "Ogg";
         font-weight: lighter;
         font-size: 100px;
         text-transform: uppercase;
+        color: #fff;
       }
 
       @media (max-width: 767px) {
@@ -83,6 +86,9 @@
     </style>
   </head>
   <body>
+    <div class="firework"></div>
+    <div class="firework"></div>
+    <div class="firework"></div>
     <div class="loader-wrap">
       <svg class="svg" viewBox="0 0 1000 1000" preserveAspectRatio="none">
         <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
@@ -203,11 +209,13 @@
         <h1>Happy New Year</h1>
       </span>
     </div>
+
     <script>
       const svg = document.getElementById("svg");
       const tl = gsap.timeline();
       const curve = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
       const flat = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
+      let fireworksDisplayed = false;
 
       function startTimer() {
         let seconds = 57;
@@ -266,6 +274,16 @@
             timerElement.innerText = "60";
 
             clearInterval(countdownInterval);
+            if (!fireworksDisplayed) {
+              // Start fireworks animation
+              const fireworks = document.querySelectorAll(".firework");
+              fireworks.forEach((firework) => {
+                firework.style.animationPlayState = "running";
+              });
+
+              newYear[0].style.display = "block";
+              fireworksDisplayed = true; // Set flag to prevent multiple displays
+            }
           }
 
           seconds++;
