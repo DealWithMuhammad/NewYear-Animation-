@@ -71,6 +71,7 @@
         position: relative;
         color: transparent;
         width: 100%;
+        text-align: center;
       }
       .new_year h1::before {
         content: attr(data-text);
@@ -79,12 +80,26 @@
         position: absolute;
         top: 0%;
         left: 0%;
-        border-right: 2px solid rgb(0, 255, 21);
-        color: #006233;
+        color: #f0ece5;
         overflow: hidden;
         animation-name: identifier;
         animation-duration: 3s;
         animation-delay: 9s; /* Delay to match the JavaScript timing */
+        animation-fill-mode: both; /* Keeps the end state of the animation */
+      }
+
+      .new_year .yearTime::before {
+        content: attr(data-text);
+        width: 90vw; /* Set the initial width to the final value of the animation */
+        height: 100%;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        color: #f0ece5;
+        overflow: hidden;
+        animation-name: identifier;
+        animation-duration: 3s;
+        animation-delay: 11s; /* Delay to match the JavaScript timing */
         animation-fill-mode: both; /* Keeps the end state of the animation */
       }
 
@@ -118,6 +133,7 @@
     <div class="firework"></div>
     <div class="firework"></div>
     <div class="firework"></div>
+
     <div class="loader-wrap">
       <svg class="svg" viewBox="0 0 1000 1000" preserveAspectRatio="none">
         <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
@@ -234,8 +250,9 @@
       </div>
     </div>
     <div class="new_year">
-      <span>
-        <h1 data-text="HAPPYNEWYEAR.">HAPPYNEWYEAR.</h1>
+      <span style="display: block">
+        <h1 class="yearText" data-text="HappyNewYear.">HAPPYNEWYEAR.</h1>
+        <h1 class="yearTime" data-text="2024">2024</h1>
       </span>
     </div>
     <!-- <div class="new-year">
