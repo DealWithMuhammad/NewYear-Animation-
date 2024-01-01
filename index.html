@@ -18,143 +18,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="firework.css" />
 
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        background-color: #e0e0e0;
-        overflow: hidden;
-      }
-
-      span {
-        overflow: hidden;
-        display: block;
-      }
-
-      .loader-wrap {
-        position: absolute;
-        z-index: 10;
-        height: 100vh;
-        width: 100%;
-        display: flex;
-        overflow: hidden;
-        align-items: center;
-        justify-content: center;
-        background: transparent;
-      }
-
-      .loader-wrap .svg {
-        position: absolute;
-        top: 0;
-        width: 100vw;
-        height: 110vh;
-      }
-
-      .new_year {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        width: 100vw;
-        background: linear-gradient(#0007, #0000), #123;
-      }
-
-      .new_year h1 {
-        font-family: "Ogg";
-        font-weight: lighter;
-        font-size: 10vw;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        position: relative;
-        color: transparent;
-        /* width: 100vw; */
-        /* text-align: center; */
-      }
-      .new_year h1::before {
-        content: attr(data-text);
-        width: 100vw; /* Set the initial width to the final value of the animation */
-        height: 100%;
-        position: absolute;
-        top: 0%;
-        left: 0%;
-        color: #f0ece5;
-        overflow: hidden;
-        animation-name: identifier;
-        animation-duration: 3s;
-        animation-delay: 9s; /* Delay to match the JavaScript timing */
-        animation-fill-mode: both; /* Keeps the end state of the animation */
-      }
-      @keyframes identifier {
-        0% {
-          width: 0vw;
-        }
-
-        100% {
-          width: 90vw;
-        }
-      }
-      .new_year h2 {
-        font-family: "Ogg";
-        font-weight: lighter;
-        font-size: 10vw;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        position: relative;
-        color: transparent;
-        width: 100%;
-      }
-      .new_year .yearTime::before {
-        content: attr(data-text);
-        width: 99vw;
-        height: 100%;
-        position: absolute;
-        top: 0%;
-        left: 0%;
-        overflow: hidden;
-        animation-name: anim;
-        animation-duration: 3s;
-        animation-delay: 10s;
-        animation-fill-mode: both;
-      }
-      @keyframes anim {
-        0% {
-          width: 0vw;
-        }
-        50% {
-          color: transparent;
-        }
-
-        100% {
-          color: #f0ece5;
-          width: 100%;
-        }
-      }
-
-      .new-year {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      @media (max-width: 767px) {
-        .loader-wrap .svg {
-          width: 200vw;
-          margin-left: -50vw;
-        }
-
-        .new_year h1 {
-          font-size: 60px;
-        }
-      }
-
-      @media screen and (max-width: 600px) {
-        .new_year h1 {
-          font-size: 45px;
-        }
-      }
-    </style>
+    <style></style>
   </head>
 
   <body style="overflow: hidden">
@@ -281,17 +145,12 @@
     </div>
     <div class="new_year">
       <span style="display: block">
-        <h1 data-text="HAPPYNEWYEAR.">HAPPYNEWYEAR.</h1>
+        <h1 data-text="HAPPY'NEW'YEAR.">HAPPY'NEW'YEAR.</h1>
         <h2 style="text-align: center" class="yearTime" data-text="2024">
           2024
         </h2>
       </span>
     </div>
-    <!-- <div class="new-year">
-      <span>
-        <h1 data-text="2024">2024</h1>
-      </span>
-    </div> -->
 
     <script src="countdown.js"></script>
   </body>

@@ -13,7 +13,6 @@ body {
     width: 70vw;
     height: 90vh;
     background-color: #000;
-    /* box-shadow: 1px 1px 1px #00ff51, -1px -1px 1px #00ff51; */
     border-radius: 10px;
     position: absolute;
     top: 5%;
@@ -55,19 +54,17 @@ body {
 
 
 #days {
-    color: #fff;
+    color: #99582a;
     font-size: 4vw;
     font-family: "Montagu Slab", serif;
-    /* text-shadow: 0px 5px 1px #5252529d; */
     letter-spacing: 2px;
 }
 
 .day {
-    color: #fff;
+    color: #99582a;
     font-size: 3vw;
     font-family: "Montagu Slab", serif;
     padding: 20px 0px;
-    /* text-shadow: 0px 5px 1px #5252529d; */
     letter-spacing: 2px;
 }
 
@@ -75,23 +72,20 @@ body {
     width: 20%;
     text-align: center;
     height: 30vh;
-    /* text-shadow: 0px 5px 1px #5252529d; */
 }
 
 #hour {
-    color: #fff;
+    color: #99582a;
     font-size: 4vw;
     font-family: "Montagu Slab", serif;
-    /* text-shadow: 0px 5px 1px #5252529d; */
     letter-spacing: 2px;
 }
 
 .hour {
-    color: #fff;
+    color: #99582a;
     font-size: 3vw;
     font-family: "Montagu Slab", serif;
     padding: 20px 0px;
-    /* text-shadow: 0px 5px 1px #5252529d; */
     letter-spacing: 2px;
 }
 
@@ -99,23 +93,20 @@ body {
     width: 20%;
     text-align: center;
     height: 30vh;
-    /* text-shadow: 0px 5px 1px #5252529d; */
 }
 
 #minute {
-    color: #fff;
+    color: #99582a;
     font-size: 4vw;
     font-family: "Montagu Slab", serif;
-    /* text-shadow: 0px 5px 1px #5252529d; */
     letter-spacing: 2px;
 }
 
 .minute {
-    color: #fff;
+    color: #99582a;
     font-size: 3vw;
     font-family: "Montagu Slab", serif;
     padding: 20px 0px;
-    /* text-shadow: 0px 5px 1px #5252529d; */
     letter-spacing: 2px;
 }
 
@@ -124,23 +115,20 @@ body {
     height: 45%;
     text-align: center;
     height: 30vh;
-    /* text-shadow: 0px 5px 1px #5252529d; */
 }
 
 #timer {
-    color: #fff;
+    color: #99582a;
     font-size: 4vw;
     font-family: "Montagu Slab", serif;
-    /* text-shadow: 0px 5px 1px #5252529d; */
     letter-spacing: 2px;
 }
 
 .second {
-    color: #fff;
+    color: #99582a;
     font-size: 3vw;
     font-family: "Montagu Slab", serif;
     padding: 20px 0px;
-    /* text-shadow: 0px 5px 1px #5252529d; */
     letter-spacing: 2px;
 }
 
@@ -151,9 +139,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* overflow: hidden; */
     position: relative;
-    /* background-color: red; */
 }
 
 .year-container h1 {
@@ -188,12 +174,10 @@ body {
 
 @keyframes slideright {
     0% {
-        /* border-right: 2px solid ; */
         width: 0%;
     }
 
     100% {
-        /* border-right: 2px solid #006233; */
         width: 100%;
     }
 
@@ -227,12 +211,10 @@ body {
 
 @keyframes slideleft {
     0% {
-        /* border-right: 2px solid #006233; */
         width: 0%;
     }
 
     100% {
-        /* border-right: 2px solid #006233; */
         width: 100%;
     }
 
@@ -247,9 +229,8 @@ body {
     stroke-dashoffset: 166;
     stroke-width: 2;
     stroke-miterlimit: 10;
-    stroke: #ffc0c0;
+    stroke: #006233;
     fill: none;
-
     animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards
 }
 
@@ -259,7 +240,7 @@ body {
     border-radius: 50%;
     display: block;
     stroke-width: 2;
-    stroke: #fff;
+    stroke: #ffffff;
     stroke-miterlimit: 10;
     margin: 10% auto;
     box-shadow: inset 0px 0px 0px #006233;
@@ -293,7 +274,7 @@ body {
 
 @keyframes fill {
     100% {
-        box-shadow: inset 0px 0px 0px 30px #ffc0c0;
+        box-shadow: inset 0px 0px 0px 30px #006233;
     }
 }
 
@@ -329,3 +310,152 @@ body {
         z-index: 1;
     }
 } */
+
+
+          * {
+              margin: 0;
+              padding: 0;
+          }
+    
+          body {
+              background-color: #e0e0e0;
+              overflow: hidden;
+          }
+    
+          span {
+              overflow: hidden;
+              display: block;
+          }
+    
+          .loader-wrap {
+              position: absolute;
+              z-index: 10;
+              height: 100vh;
+              width: 100%;
+              display: flex;
+              overflow: hidden;
+              align-items: center;
+              justify-content: center;
+              background: transparent;
+          }
+    
+          .loader-wrap .svg {
+              position: absolute;
+              top: 0;
+              width: 100vw;
+              height: 110vh;
+          }
+    
+          .new_year {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: 100vh;
+              width: 100vw;
+              background: linear-gradient(#0007, #0000), #123;
+          }
+    
+          .new_year h1 {
+              font-family: "Ogg";
+              font-weight: lighter;
+              font-size: 9vw;
+              text-transform: uppercase;
+              letter-spacing: 2px;
+              position: relative;
+              color: transparent;
+              /* width: 100vw; */
+              /* text-align: center; */
+          }
+    
+          .new_year h1::before {
+              content: attr(data-text);
+              width: 100vw;
+              /* Set the initial width to the final value of the animation */
+              height: 100%;
+              position: absolute;
+              top: 0%;
+              left: 0%;
+              overflow: hidden;
+              animation-name: identifier;
+              animation-duration: 3s;
+              animation-delay: 10s;
+              /* Delay to match the JavaScript timing */
+              animation-fill-mode: both;
+              /* Keeps the end state of the animation */
+          }
+    
+          @keyframes identifier {
+              0% {
+                  width: 0vw;
+              }
+    
+              100% {
+                  color: #073b4c;
+                  text-shadow: 5px 5px 2px #000000c8;
+                  width: 90vw;
+              }
+          }
+    
+          .new_year h2 {
+              font-family: "Montagu Slab", serif;
+              font-weight: lighter;
+              font-size: 15vw;
+              text-transform: uppercase;
+              letter-spacing: 2px;
+              position: relative;
+              color: transparent;
+              width: 100%;
+          }
+    
+          .new_year .yearTime::before {
+              content: attr(data-text);
+              width: 99vw;
+              height: 100%;
+              position: absolute;
+              top: 0%;
+              left: 0%;
+              overflow: hidden;
+              animation-name: anim;
+              animation-duration: 3s;
+              animation-delay: 10s;
+              animation-fill-mode: both;
+          }
+    
+          @keyframes anim {
+              0% {
+                  width: 0vw;
+              }
+    
+              50% {
+                  color: transparent;
+              }
+    
+              100% {
+                  color: #073b4c;
+                  text-shadow: 5px 5px 2px #000000c8;
+                  width: 100%;
+              }
+          }
+    
+          .new-year {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+          }
+    
+          @media (max-width: 767px) {
+              .loader-wrap .svg {
+                  width: 200vw;
+                  margin-left: -50vw;
+              }
+    
+              .new_year h1 {
+                  font-size: 60px;
+              }
+          }
+    
+          @media screen and (max-width: 600px) {
+              .new_year h1 {
+                  font-size: 45px;
+              }
+          }
